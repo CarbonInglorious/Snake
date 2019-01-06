@@ -1,0 +1,23 @@
+
+
+from Tkinter import*
+from random import randrange
+
+
+def deplacement():
+        global a,b,z,y,lu,lv,score,serpent,j,m
+        c=len(serpent)
+        c=c-1
+        while c!=0 :
+                lu[c]=lu[c-1]
+                lv[c]=lv[c-1]
+                c+=-1
+        lu[0] += a
+        lv[0] += b
+        c=0
+        while c!=len(serpent):
+                can.coords(serpent[c],lu[c],lv[c],lu[c]+10,lv[c]+10)
+                c+=1
+        c=1
+        while c!=len(serpent):
+                if lu[c]==lu[0]
